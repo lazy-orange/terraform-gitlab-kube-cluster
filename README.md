@@ -42,7 +42,7 @@
 
 [![Cloud Posse][logo]](https://cpco.io/homepage)
 
-# terraform-example-module [![Latest Release](https://img.shields.io/github/release/cloudposse/terraform-example-module.svg)](https://github.com/cloudposse/terraform-example-module/releases/latest) [![Slack Community](https://slack.cloudposse.com/badge.svg)](https://slack.cloudposse.com) [![Discourse Forum](https://img.shields.io/discourse/https/ask.sweetops.com/posts.svg)](https://ask.sweetops.com/)
+# terraform-example-module [![Latest Release](https://img.shields.io/github/release/cloudposse/terraform-example-module.svg)](https://github.com/cloudposse/terraform-example-module/releases/latest)
 
 
 This is `terraform-example-module` project provides all the scaffolding for a typical well-built Cloud Posse module. It's a template repository you can
@@ -64,9 +64,9 @@ This project is part of our comprehensive ["SweetOps"](https://cpco.io/sweetops)
 
 
 
-It's 100% Open Source and licensed under the [APACHE2](LICENSE).
 
 
+It's 100% Open Source and licensed under the [MIT](LICENSE).
 
 
 
@@ -120,27 +120,35 @@ Available targets:
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12.0, < 0.14.0 |
-| local | ~> 1.2 |
-| random | ~> 2.2 |
+| terraform | >= 0.12.0, < 0.13.0 |
+| gitlab | >= 2.10 |
+| kubernetes | >= 1.11 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| random | ~> 2.2 |
+| gitlab | >= 2.10 |
+| kubernetes | >= 1.11 |
 
 ## Inputs
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
-| example | Example variable | `string` | `"hello world"` | no |
+| cluster\_name | n/a | `string` | n/a | yes |
+| dns\_zone | (Required) specifies the DNS suffix for the externally-visible websites and services deployed in the cluster | `string` | n/a | yes |
+| enabled | n/a | `bool` | `true` | no |
+| group\_gitlab\_runner\_enabled | (Optional) Setup a gitlab group runner (will be used a group runner token to set GITLAB\_RUNNER\_TOKEN env variable) | `bool` | `false` | no |
+| kubernetes\_ca\_cert | (Required) PEM-encoded root certificates bundle for TLS authentication | `string` | n/a | yes |
+| kubernetes\_endpoint | (Required) The hostname (in form of URI) of Kubernetes master. | `string` | n/a | yes |
+| kubernetes\_token | (Required) Token of your service account, must have admin permission to create another service accounts | `string` | n/a | yes |
+| root\_gitlab\_group | (Semi-optional) A gitlab group id attach Kubernetes cluster to | `string` | `""` | no |
+| root\_gitlab\_project | (Semi-optional) A gitlab project id attach Kubernetes cluster to | `string` | `""` | no |
+| stage | (Required) Stage, e.g. 'prod', 'staging', 'dev' or 'testing' | `string` | n/a | yes |
 
 ## Outputs
 
-| Name | Description |
-|------|-------------|
-| example | Example output |
+No output.
 
 
 
@@ -249,31 +257,34 @@ Copyright © 2020-2020 [Cloud Posse, LLC](https://cloudposse.com)
 
 
 
+
+
+
 ## License 
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0) 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-See [LICENSE](LICENSE) for full details.
+The MIT License (MIT)
 
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-      https://www.apache.org/licenses/LICENSE-2.0
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-    KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
 
-
-
+Source: <https://opensource.org/licenses/MIT>
 
 
 
@@ -300,11 +311,11 @@ Check out [our other projects][github], [follow us on twitter][twitter], [apply 
 
 ### Contributors
 
-|  [![Erik Osterman][osterman_avatar]][osterman_homepage]<br/>[Erik Osterman][osterman_homepage] |
+|  [![Vitaly Markov][vymarkov_avatar]][vymarkov_homepage]<br/>[Vitaly Markov][vymarkov_homepage] |
 |---|
 
-  [osterman_homepage]: https://github.com/osterman
-  [osterman_avatar]: https://img.cloudposse.com/150x150/https://github.com/osterman.png
+  [vymarkov_homepage]: https://github.com/vymarkov
+  [vymarkov_avatar]: https://img.cloudposse.com/150x150/https://github.com/vymarkov.png
 
 [![README Footer][readme_footer_img]][readme_footer_link]
 [![Beacon][beacon]][website]

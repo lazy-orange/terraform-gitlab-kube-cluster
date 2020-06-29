@@ -11,7 +11,7 @@ name: terraform-example-module
 #logo: docs/logo.png
 
 # License of this project
-license: "APACHE2"
+license: "MIT"
 
 # Copyrights
 copyrights:
@@ -27,12 +27,6 @@ badges:
   - name: "Latest Release"
     image: "https://img.shields.io/github/release/cloudposse/terraform-example-module.svg"
     url: "https://github.com/cloudposse/terraform-example-module/releases/latest"
-  - name: "Slack Community"
-    image: "https://slack.cloudposse.com/badge.svg"
-    url: "https://slack.cloudposse.com"
-  - name: "Discourse Forum"
-    image: "https://img.shields.io/discourse/https/ask.sweetops.com/posts.svg"
-    url: "https://ask.sweetops.com/"
 
 # List any related terraform modules that this module may be used with or that this module depends on.
 related:
@@ -91,5 +85,5 @@ include:
 
 # Contributors to this project
 contributors:
-  - name: "Erik Osterman"
-    github: "osterman"
+  - name: "Vitaly Markov"
+    github: "vymarkov"
