@@ -147,7 +147,7 @@ module "example" {
 ## Examples
 
 Here is an example of using this module:
-- [`examples/complete`](https://github.com/lazyorangejs/terraform-gitlab-kube-cluster/) - complete example of using this module
+- [`examples/complete`](https://github.com/lazyorangejs/terraform-gitlab-kube-cluster/tree/master/examples/complete) - complete example of using this module
 
 
 
@@ -209,6 +209,7 @@ Are you using this project or any of our other projects? Consider [leaving a tes
 
 Check out these related projects.
 
+- [root.lazyorange.xyz](https://github.com/lazyorangejs/root.lazyorange.xyz) - A terraform configuration to setup the ready-to-go Kubernetes cluster and connect to GitLab
 - [terraform-null-label](https://github.com/cloudposse/terraform-null-label) - Terraform module designed to generate consistent names and tags for resources. Use terraform-null-label to implement a strict naming convention.
 
 

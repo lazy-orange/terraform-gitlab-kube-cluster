@@ -30,6 +30,9 @@ badges:
 
 # List any related terraform modules that this module may be used with or that this module depends on.
 related:
+  - name: "root.lazyorange.xyz"
+    description: "A terraform configuration to setup the ready-to-go Kubernetes cluster and connect to GitLab"
+    url: "https://github.com/lazyorangejs/root.lazyorange.xyz"
   - name: "terraform-null-label"
     description: "Terraform module designed to generate consistent names and tags for resources. Use terraform-null-label to implement a strict naming convention."
     url: "https://github.com/cloudposse/terraform-null-label"
@@ -117,7 +120,7 @@ usage: |-
 # Example usage
 examples: |-
   Here is an example of using this module:
-  - [`examples/complete`](https://github.com/lazyorangejs/terraform-gitlab-kube-cluster/) - complete example of using this module
+  - [`examples/complete`](https://github.com/lazyorangejs/terraform-gitlab-kube-cluster/tree/master/examples/complete) - complete example of using this module
 
 # How to get started quickly
 #quickstart: |-
