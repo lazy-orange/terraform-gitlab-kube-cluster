@@ -1,4 +1,12 @@
-variable "example" {
+variable "root_gitlab_group" {
   type        = string
-  description = "The value which will be passed to the example module"
+  description = "(Required) A gitlab group id attach Kubernetes cluster to"
+}
+
+variable "gitlab_token" {
+  type = string
+}
+
+variable "do_token" {
+  type = string
 }
